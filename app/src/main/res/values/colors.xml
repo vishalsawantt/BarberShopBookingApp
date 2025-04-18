@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Colors -->
+    <color name="blue">#007BFF</color> <!-- Default button color -->
+    <color name="dark_blue">#0056B3</color> <!-- Button pressed state -->
+    <color name="primaryColor">#00796B</color>
+    <color name="primary">#00796B</color> <!-- If used elsewhere -->
+    <color name="secondary">#0288D1</color>
+
+    <color name="purple_500">#6200EE</color> <!-- This is Material Purple 500 -->
+
+    <color name="colorPrimary">#2196F3</color> <!-- Blue shade -->
+
+    <color name="light_green">#A5D6A7</color> <!-- Soft green shade -->
+
+    <color name="faint_red">#FFCDD2</color>  <!-- Light Red -->
+    <color name="faint_green">#C8E6C9</color>  <!-- Light Green -->
+    <color name="light_red">#EF9A9A</color> <!-- Muted light red -->
+
+    <color name="dark_gray">#404040</color>
+
+
+
+    <color name="light_gray">#F0F0F0</color>
+    <color name="gray">#D3D3D3</color>
+
+    <!-- Status Colors -->
+    <color name="green">#28A745</color> <!-- Booked slot color -->
+    <color name="red">#DC3545</color> <!-- Error or unavailable slot -->
+    <color name="yellow">#FFC107</color> <!-- Pending/processing status -->
+</resources>

@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shop Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingBottom="10dp" />
+
+            <!-- Message Text -->
+            <TextView
+                android:text="Pick a time for your haircut booking."
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shop Closed"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone"
+                android:paddingBottom="10dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/white"
+            android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSlots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="10dp"
+                android:layout_margin="1dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/white"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/mapFragment"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:id="@+id/txtRouteDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Click on map and check nearest shop.."
+                        android:visibility="visible"
+                        android:textFontWeight="8"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginTop="10dp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:id="@+id/btnMessageShopOwner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Message Shop Owner"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

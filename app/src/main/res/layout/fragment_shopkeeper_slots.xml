@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:scrollbars="vertical"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@android:color/darker_gray"
+        android:backgroundTint="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginBottom="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Welcome, Shopkeeper!"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#757575"/>
+
+            <ImageButton
+                android:id="@+id/btnLogout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_logout"
+                android:contentDescription="Logout"
+                android:padding="8dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="fitCenter"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:strokeWidth="1dp"
+        android:layout_marginTop="10dp"
+        app:strokeColor="@android:color/darker_gray"
+        android:backgroundTint="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Your Booking Room:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_gravity="left"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+
+    <!-- Select Date Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSelectDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Date"
+        app:cornerRadius="10dp"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Selected Date Display -->
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No date selected"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:padding="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_gravity="left"
+        android:background="@drawable/rounded_box_gray"
+        android:layout_marginBottom="14dp"/>
+
+    <!-- Card for Price Input -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="@android:color/white"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:id="@+id/edtDefaultPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter price for all slots"
+            android:inputType="number"
+            android:padding="14dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Card for Time Slot Input -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@android:color/white"
+        android:layout_marginBottom="14dp">
+
+        <EditText
+            android:id="@+id/edtTimeSlot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Time Slot (e.g., 2:00 PM)"
+            android:inputType="text"
+            android:padding="14dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Add Slot Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Slot"
+        app:cornerRadius="10dp"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="@color/dark_blue"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- RecyclerView Card Container with Border -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@android:color/darker_gray"
+        android:layout_marginTop="0dp"
+        android:padding="8dp"
+        android:backgroundTint="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check And Manage Your Slots"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_gravity="left"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- RecyclerView to Display Slots -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDates"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:clipToPadding="false"/>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

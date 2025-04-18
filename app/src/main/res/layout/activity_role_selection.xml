@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@color/white">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo"
+        android:contentDescription="App Logo"
+        android:layout_marginBottom="32dp"
+        android:gravity="center_horizontal"/>
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/txtSelectRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Your Role"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Shopkeeper Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnShopkeeper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login as Shopkeeper"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:textSize="16sp"
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"
+        app:cornerSize="50dp"/>
+
+    <!-- Customer Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login as Customer"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:textSize="16sp"
+        android:backgroundTint="@color/secondary"
+        android:textColor="@color/white"
+        app:cornerSize="50dp"/>
+</LinearLayout>

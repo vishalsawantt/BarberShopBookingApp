@@ -1,0 +1,184 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Map View -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp">
+
+        <fragment
+            android:id="@+id/mapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvMapInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Click on the map to set your shop location."
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"/>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:boxStrokeColor="@android:color/holo_blue_dark"
+        app:hintTextColor="@android:color/darker_gray"
+        app:startIconDrawable="@drawable/ic_user">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOwnerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:paddingStart="50dp"
+            android:inputType="textPersonName"
+            android:gravity="start"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Shop Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:boxStrokeColor="@android:color/holo_blue_dark"
+        app:hintTextColor="@android:color/darker_gray"
+        app:startIconDrawable="@drawable/ic_shopename3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etShopName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Shope Name"
+            android:paddingStart="50dp"
+            android:inputType="textPersonName"
+            android:gravity="start"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Address -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:boxStrokeColor="@android:color/holo_blue_dark"
+        app:hintTextColor="@android:color/darker_gray"
+        app:startIconDrawable="@drawable/ic_address">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:paddingStart="50dp"
+            android:inputType="textPersonName"
+            android:gravity="start"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Email Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:boxStrokeColor="@android:color/holo_blue_dark"
+        app:hintTextColor="@android:color/darker_gray"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_email2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:paddingStart="50dp"
+            android:inputType="textEmailAddress"
+            android:gravity="start"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:boxStrokeColor="@android:color/holo_blue_dark"
+        app:hintTextColor="@android:color/darker_gray"
+        app:startIconDrawable="@drawable/ic_phone3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMobileNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile Number"
+            android:paddingStart="50dp"
+            android:inputType="phone"
+            android:gravity="start"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        app:boxStrokeColor="@android:color/holo_blue_dark"
+        app:hintTextColor="@android:color/darker_gray"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/ic_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:paddingStart="50dp"
+            android:inputType="textPassword"
+            android:gravity="start"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white" />
+
+    <!-- Sign-up Text -->
+    <TextView
+        android:id="@+id/txtSignin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Allready have an account? Sign in"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

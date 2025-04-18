@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "436268053877",
+    "firebase_url": "https://barber-shop-booking-app-6c43e-default-rtdb.firebaseio.com",
+    "project_id": "barber-shop-booking-app-6c43e",
+    "storage_bucket": "barber-shop-booking-app-6c43e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436268053877:android:be37dffd34482e78524f3c",
+        "android_client_info": {
+          "package_name": "com.example.barbershopbookingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436268053877-ii7pbqu2hm7g47e4e37oga5o40aplakr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrdtT5eI5mmjtihRvRv26WXs2omVnpzhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436268053877-ii7pbqu2hm7g47e4e37oga5o40aplakr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
