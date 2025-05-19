@@ -37,6 +37,5 @@ An Android application that allows customers to book time slots at nearby barber
 ## ✅ To Do / Future Enhancements
 
 - [ ] Add customer review system for shops
-- [ ] Chat between customer and shopkeeper
 - [ ] Email/SMS booking confirmation
 - [ ] Notifications for upcoming bookings
